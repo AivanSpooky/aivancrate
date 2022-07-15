@@ -1,0 +1,27 @@
+{% extends 'mainh.html' %}
+
+{% block title %}
+aivan-extremes       
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Топ пройденных экстримов Айвана</h1>
+    <p>Внимание! Топ отсортирован по убыванию сложности, то есть на первом месте стоит самый сложный пройденный экстрим, а ниже расположены менее сложные.</p>
+</div>
+    {% for el in articles %}
+    <div class="container mt-5">
+        <figure class="wp-block-image size-small is-resized" style="padding: 70px; margin: 0px"><img loading="lazy" src={{el.img}} alt="info navigation logo" class="wp-image-42553" width="350" height="150" align="left"; vspace="5"; hspace="5">
+            <div style="padding-left: 15px"><h2 style="text-align: left; margin-bottom: 10px">#{{el.id}} – {{el.level_name}}</h2>
+                <h3 style="text-align: left"><i>{{el.creator_name}}</i></h3>
+            </div>
+        </figure>  
+    </div>
+    
+    {% endfor %}
+
+{% endblock %}
+
+{% block center %}
+
+{% endblock %}

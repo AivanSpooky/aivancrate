@@ -1,0 +1,45 @@
+{% extends 'mainh.html' %}
+
+{% block title %}
+top-players      
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Топ крутых челиков!</h1>
+    <p>Внимание! Топ отсортирован по убыванию скилла, то есть на первом месте стоит самый скилловый игрок, а ниже расположены менее скилловые (бля не принимайте эту фразу за ЧСВ, я вставлял все в шаблон хахаха).</p>
+</div>
+    {% for el in articles %}
+    <div class="container mt-1">
+        <figure class="wp-block-image size-small is-resized" style="padding: 70px; margin: 0px"><img loading="lazy" src="static/images/player_icons/{{el.icon}}" alt="info navigation logo" class="wp-image-42553" width="50" height="50" align="left"; vspace="5"; hspace="5">
+            <div style="padding-left: 15px"><h2 style="text-align: left; margin-bottom: 10px">#{{el.id}} – {{el.nickname}}</h2>
+                <p>·Играет с версии: {{el.version}}</p>
+                <p>·Топ-5 достижений:</p>
+
+                    <figure class="wp-block-image size-small is-resized" style="padding: 0px; margin: 0px"><img loading="lazy" src="static/images/{{el.top1_diff}}.png" alt="info navigation logo" class="wp-image-42553" width="25" height="25" align="left"; vspace="5"; hspace="5">
+                        <div style="padding-left: 15px"><p style="text-align: left; margin-bottom: 10px; font-size: small;">#1 – {{el.top1_text}}</p></div>
+                    </figure>  
+                    <figure class="wp-block-image size-small is-resized" style="padding: 0px; margin: 0px"><img loading="lazy" src="static/images/{{el.top2_diff}}.png" alt="info navigation logo" class="wp-image-42553" width="25" height="25" align="left"; vspace="5"; hspace="5">
+                        <div style="padding-left: 15px"><p style="text-align: left; margin-bottom: 10px; font-size: small;">#2 – {{el.top2_text}}</p></div>
+                    </figure>  
+                    <figure class="wp-block-image size-small is-resized" style="padding: 0px; margin: 0px"><img loading="lazy" src="static/images/{{el.top3_diff}}.png" alt="info navigation logo" class="wp-image-42553" width="25" height="25" align="left"; vspace="5"; hspace="5">
+                        <div style="padding-left: 15px"><p style="text-align: left; margin-bottom: 10px; font-size: small;">#3 – {{el.top3_text}}</p></div>
+                    </figure>  
+                    <figure class="wp-block-image size-small is-resized" style="padding: 0px; margin: 0px"><img loading="lazy" src="static/images/{{el.top4_diff}}.png" alt="info navigation logo" class="wp-image-42553" width="25" height="25" align="left"; vspace="5"; hspace="5">
+                        <div style="padding-left: 15px"><p style="text-align: left; margin-bottom: 10px; font-size: small;">#4 – {{el.top4_text}}</p></div>
+                    </figure>  
+                    <figure class="wp-block-image size-small is-resized" style="padding: 0px; margin: 0px"><img loading="lazy" src="static/images/{{el.top5_diff}}.png" alt="info navigation logo" class="wp-image-42553" width="25" height="25" align="left"; vspace="5"; hspace="5">
+                        <div style="padding-left: 15px"><p style="text-align: left; margin-bottom: 10px; font-size: small;">#5 – {{el.top5_text}}</p></div>
+                    </figure>  
+
+            </div>
+        </figure>  
+    </div>
+    
+    {% endfor %}
+
+{% endblock %}
+
+{% block center %}
+
+{% endblock %}

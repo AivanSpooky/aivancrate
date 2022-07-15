@@ -1,0 +1,30 @@
+{% extends 'mainh.html' %}
+
+{% block title %}
+aivan-levels       
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Топ уровней Айвана</h1>
+    <p>Внимание! Топ отсортирован по убыванию крутости уровней, то есть на первом месте стоит самый крутой уровень Айвана, а ниже расположены менее крутые.</p>
+</div>
+    {% for el in articles %}
+    <div class="container mt-5">
+        <figure class="wp-block-image size-small is-resized" style="padding: 70px; margin: 0px"><img loading="lazy" src="static/images/aivanl/{{el.img}}" alt="info navigation logo" class="wp-image-42553" width="350" height="150" align="left"; vspace="5"; hspace="5">
+            <div style="padding-left: 15px"><figure class="wp-block-image size-small is-resized" style="padding: 0px; margin: 0px"><img loading="lazy" src="static/images/{{el.difficulty}}.png" alt="info navigation logo" class="wp-image-42553" width="75" height="75" align="left"; vspace="5"; hspace="5">
+                <div style="padding-left: 15px"><h2 style="text-align: left; margin-bottom: 10px">#{{el.id}} – {{el.level_name}}</h2>
+                    <h3 style="text-align: left"><i>Created by: {{el.creator_name}}</i></h3>
+                    <h3 style="text-align: left"><i>State: {{el.state}}</i></h3>
+                </div>
+            </div>
+        </figure>  
+    </div>
+    
+    {% endfor %}
+
+{% endblock %}
+
+{% block center %}
+
+{% endblock %}

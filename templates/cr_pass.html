@@ -1,0 +1,29 @@
+{% extends 'mainh.html' %}
+
+{% block title %}
+aivancrate       
+{% endblock %}
+
+{% block body %}
+<figure class="wp-block-image size-large is-resized" style="padding: 0px; margin: 0px; text-align: center;"><img loading="lazy" src="static/images/sus.gif" alt="info navigation logo" class="wp-image-42553" width="350" height="175"></figure>
+<h2 id="405-not-allowed" class="has-anchor-hash" style="padding: 0px; margin: 0px; font-size: 45px; text-align: center;">Введи пароль<a class="anchor-hash" href="#405-not-allowed" aria-hidden="true"></a></h2>
+<script type="text/javascript">
+    var textt = ""
+    if ({notpass}){
+        textt = "Неверный пароль"
+        document.getElementById("textt").innerHTML = textt;
+    }
+</script>
+<p class="has-anchor-hash" style="padding: 0px; margin: 0px; font-size: 45px; text-align: center;"><div id="textt"></div></p>
+<div class="container mt-5">
+    <form method="post">
+        <input type="text" name="passwo" id="passwo" class="form-control"><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+
+{% endblock %}
+
+{% block center %}
+
+{% endblock %}
